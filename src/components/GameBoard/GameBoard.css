@@ -1,0 +1,13 @@
+.board {
+    display: flex;
+    max-width: 300px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+.board > div {
+    width: calc(100% / 3);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
