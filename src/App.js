@@ -1,7 +1,9 @@
 import './App.css';
 import GameBoard from './components/GameBoard/GameBoard';
 
-function App() {
+function App(props) {
+
+
   return (
     <div className="App">
         <GameBoard />

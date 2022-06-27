@@ -12,32 +12,44 @@ const personTwo = {
   playerTwo: 'O'
 }
 
-let arrPlayerOne = [];
-let arrPlayerTwo = [];
+let arr = [
+  ["","",""],
+  ["","",""],
+  ["","",""]
+];
+
 const receivedValue = (receivedData) => {
 
- if (playerSwitch) {
-    arrPlayerTwo.push(receivedData, personTwo.playerTwo)
-    setSwitch(false)
-    console.log(arrPlayerTwo)
- }else {
-    arrPlayerOne.push(receivedData, personOne.playerOne)
-    setSwitch(true)
-    console.log(arrPlayerOne)
- }
+  let [position, value] = (receivedData.split(','))
+
+
+  arr[position][value] = value
+
+  console.log(arr)
+
+//  if (playerSwitch) {
+//     arrPlayerTwo.push(...receivedData, ...personTwo.playerTwo)
+//     setSwitch(false)
+//     console.log(arrPlayerTwo)
+//  }else {
+//     arrPlayerOne.push(...receivedData, ...personOne.playerOne)
+//     setSwitch(true)
+//     console.log(arrPlayerOne)
+//  }
 }
+
 
   return (
     <div className='board'>
-        <Squares val={'1'} OnSaveValue={receivedValue}/>
-        <Squares val={'2'} OnSaveValue={receivedValue}/>
-        <Squares val={'3'} OnSaveValue={receivedValue}/>
-        <Squares val={'4'} OnSaveValue={receivedValue}/>
-        <Squares val={'5'} OnSaveValue={receivedValue}/>
-        <Squares val={'6'} OnSaveValue={receivedValue}/>
-        <Squares val={'7'} OnSaveValue={receivedValue}/>
-        <Squares val={'8'} OnSaveValue={receivedValue}/>
-        <Squares val={'9'} OnSaveValue={receivedValue}/>
+        <Squares val={'0,0'} OnSaveValue={receivedValue}/>
+        <Squares val={'0,1'} OnSaveValue={receivedValue}/>
+        <Squares val={'0,2'} OnSaveValue={receivedValue}/>
+        <Squares val={'1,0'} OnSaveValue={receivedValue}/>
+        <Squares val={'1,1'} OnSaveValue={receivedValue}/>
+        <Squares val={'1,2'} OnSaveValue={receivedValue}/>
+        <Squares val={'2,0'} OnSaveValue={receivedValue}/>
+        <Squares val={'2,1'} OnSaveValue={receivedValue}/>
+        <Squares val={'2,2'} OnSaveValue={receivedValue}/>
     </div>
   )
 }
