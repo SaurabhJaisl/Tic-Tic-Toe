@@ -1,12 +1,20 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const Squares = (props) => {
 
-    const clickHandler = (e) => {
-      props.OnSaveValue(e.target.value);
-      e.target.setAttribute("disabled", "");
+  const personOne = {
+    playerOne: 'X'
+  }
+  const personTwo = {
+    playerTwo: 'O'
+  }
 
-    }
+  const clickHandler = (e) => {
+
+    props.OnSaveValue(e.target.value, personTwo.playerTwo, personOne.playerOne);
+    e.target.setAttribute("disabled", "");
+
+  }
 
   return (
     <div>

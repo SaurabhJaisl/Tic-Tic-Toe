@@ -1,43 +1,34 @@
-import React ,{ useState, useEffect }from 'react';
+import React from 'react';
 import Squares from './Squares';
 import './GameBoard.css';
+// import Winner from '../Winner/Winner';
 
-const GameBoard = (props) => {
+const GameBoard = () => {
 
-const [playerSwitch, setSwitch] = useState(false);
-const personOne = {
-    playerOne: 'X'
-}
-const personTwo = {
-  playerTwo: 'O'
-}
-
-let arr = [
+let mainBoard = [
   ["","",""],
   ["","",""],
   ["","",""]
 ];
+let playerTurn,turnFlag = false;
 
-const receivedValue = (receivedData) => {
+const receivedValue = (receivedData, playerO, playerX) => {
 
-  let [position, value] = (receivedData.split(','))
-
-
-  arr[position][value] = value
-
-  console.log(arr)
-
-//  if (playerSwitch) {
-//     arrPlayerTwo.push(...receivedData, ...personTwo.playerTwo)
-//     setSwitch(false)
-//     console.log(arrPlayerTwo)
-//  }else {
-//     arrPlayerOne.push(...receivedData, ...personOne.playerOne)
-//     setSwitch(true)
-//     console.log(arrPlayerOne)
-//  }
+if (turnFlag) {
+  playerTurn = playerO;
+  turnFlag = false;
+}else {
+  playerTurn = playerX;
+  turnFlag = true
 }
+let [position, value] = (receivedData.split(','))
 
+mainBoard[position][value] = playerTurn;
+winnerCal(mainBoard, playerO, playerX)
+}
+const winnerCal = (playersData, playerO, playerX) => {
+  console.log(playersData);
+}
 
   return (
     <div className='board'>
