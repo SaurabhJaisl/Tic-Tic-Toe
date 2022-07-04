@@ -1,4 +1,5 @@
 import React from 'react'
+import './GameBoard.css';
 
 const Squares = (props) => {
 
@@ -17,7 +18,7 @@ const Squares = (props) => {
   }
 
   return (
-    <div>
+    <div className='BoardSpot'>
         <input type={'radio'} value={props.val} onClick={ clickHandler } />
     </div>
   )

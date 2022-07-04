@@ -1,0 +1,11 @@
+.footer {
+    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer p {
+    font-size: 12px;
+    font-weight: 800;
+}
