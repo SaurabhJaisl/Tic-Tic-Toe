@@ -1,97 +1,23 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.MainBoard {
+  height: calc(100vh - 30px);
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: #16222A;  
+  background: -webkit-linear-gradient(to right, #3A6073, #16222A);  
+  background: linear-gradient(to right, #3A6073, #16222A); 
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
-
-
-
-.game {
-  font: 14px 'Century Gothic', Futura, sans-serif;
-  margin: 20px;
-  min-height: 260px;
-}
-
-.game ol,
-.game ul {
-  padding-left: 30px;
-}
-
-.board-row:after {
-  clear: both;
-  content: '';
-  display: table;
-}
-
-.status {
-  margin-bottom: 10px;
-}
-
-.restart {
-  margin-top: 10px;
-}
-
-.square {
-  background: #fff;
-  border: 1px solid #999;
-  float: left;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 34px;
-  height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
-  padding: 0;
+.page-title {
+  background: linear-gradient( to right, hsl(52deg 87% 63%), hsl(0deg 100% 65%) );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-align: center;
-  width: 34px;
+  font-size: 45px;
+  letter-spacing: 10px;
 }
-
-.square:focus {
-  outline: none;
-  background: #ddd;
-}
-
-.game {
-  display: flex;
-  flex-direction: row;
-}
-
-.game-info {
-  margin-left: 20px;
-  min-width: 190px;
+@media (max-width: 767px) {
+  .page-title {
+    font-size: 34px;
+  }
 }
