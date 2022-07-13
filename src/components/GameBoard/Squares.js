@@ -1,5 +1,5 @@
 import React from 'react'
-import './GameBoard.css';
+import './GameBoard.scss';
 
 const Squares = (props) => {
 
