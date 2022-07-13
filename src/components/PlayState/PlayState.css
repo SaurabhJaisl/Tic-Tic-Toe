@@ -1,0 +1,15 @@
+.action-btn {
+    display: flex;
+    width: 200px;
+}
+.play-btn {
+    background: linear-gradient( to right, hsl(52deg 87% 63%), hsl(0deg 100% 65%) );
+    color: #fff;
+    padding: 15px 40px;
+    width: 100%;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}

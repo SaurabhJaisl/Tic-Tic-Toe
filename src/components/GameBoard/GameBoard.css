@@ -23,9 +23,19 @@
 .BoardSpot {
     border: 4px solid #fff;
 }
-/* .BoardSpot > input {
+.BoardSpot > input {
     visibility: hidden;
-} */
+}
+.BoardSpot > label {
+    font-size: 80px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "RubikMoonRock";
+    color: #ffc500;
+}
 .BoardSpot:nth-child(1) {
   border-top: none;
   border-left: none;
