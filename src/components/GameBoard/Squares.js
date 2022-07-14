@@ -4,10 +4,10 @@ import './GameBoard.scss';
 const Squares = (props) => {
 
   const personOne = {
-    playerOne: 'x'
+    playerOne: 'X'
   }
   const personTwo = {
-    playerTwo: 'o'
+    playerTwo: 'O'
   }
   
   const clickHandler = (e) => {

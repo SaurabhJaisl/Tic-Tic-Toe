@@ -6,6 +6,7 @@ import Winner from '../Winner/Winner';
 const GameBoard = () => {
 
   const [playerWins, setplayerWins] = useState(false);
+  const [playerWinner, setplayerWinner] = useState('');
   let mainBoard = [
     ["", "", ""],
     ["", "", ""],
@@ -39,10 +40,12 @@ const GameBoard = () => {
             ((i === 0) && ((playersData[i][j] === playerX) && (playersData[i + 1][j] === playerX) && (playersData[i + 2][j] === playerX)))) {
             console.log(`${playerX} is won`)
             setplayerWins(true)
+            setplayerWinner(playerX)
             break;
           } else if ((((playersData[i][j] === playerO) && (playersData[i][j + 1] === playerO) && (playersData[i][j + 2] === playerO)) || ((i === 0) && ((playersData[i][j] === playerO) && (playersData[i + 1][j] === playerO) && (playersData[i + 2][j] === playerO))))) {
             console.log(`${playerO} is won`)
             setplayerWins(true)
+            setplayerWinner(playerO)
             break;
           }
         }
@@ -50,11 +53,13 @@ const GameBoard = () => {
           (((playersData[i][i + 2]) === playerX) && (playersData[i + 1][i + 1] === playerX) && (playersData[i + 2][i] === playerX)))) {
             console.log(`${playerX} is won`)
             setplayerWins(true)
+            setplayerWinner(playerX)
             break;
         } else if ((i === 0) && (((playersData[i][i] === playerO) && (playersData[i + 1][i + 1] === playerO) && (playersData[i + 2][i + 2] === playerO)) ||
           (((playersData[i][i + 2]) === playerO) && (playersData[i + 1][i + 1] === playerO) && (playersData[i + 2][i] === playerO)))) {
             console.log(`${playerO} is won`)
             setplayerWins(true)
+            setplayerWinner(playerO)
             break;
         }
         if (playerWins) break;
@@ -66,7 +71,7 @@ const GameBoard = () => {
   return (
     
     <>
-         {playerWins ? <Winner /> : <div className='board'>      
+         {playerWins ? <Winner PlayerWins={playerWinner} /> : <div className='board'>      
       <Squares val={'0,0'} SquarId={'square-0-0'} OnSaveValue={receivedValue} />
       <Squares val={'0,1'} SquarId={'square-0-1'} OnSaveValue={receivedValue} />
       <Squares val={'0,2'} SquarId={'square-0-2'} OnSaveValue={receivedValue} />

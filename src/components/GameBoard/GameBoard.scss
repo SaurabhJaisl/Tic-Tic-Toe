@@ -39,7 +39,7 @@
         }
 
         & > label {
-            font-size: 80px;
+            font-size: 65px;
             width: 100%;
             height: 100%;
             display: flex;
@@ -53,10 +53,10 @@
             cursor: pointer;
             animation: text-animation 2s ease-in infinite;
 
-            &.x {
+            &.X {
                 background-image: linear-gradient(-225deg, #b9dab6 0%, #ffffff 29%, #8fcd3b 67%, #9bcbe4 100%);
             }
-            &.o {
+            &.O {
                 background-image: linear-gradient(-225deg, #58bed6 0%, #ffffff 29%, #58bed6 67%, #9bcbe4 100%);
             }
         }
@@ -194,6 +194,23 @@
             font-weight: bold;
             z-index: -2;
             opacity: 0.4;
+        }
+    }
+    .winnerPlayer {
+        font-size: 30px;
+        background-size: 200% auto;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: #ffffff00;
+        font-weight: bold;
+        cursor: pointer;
+        animation: text-animation 2s ease-in infinite;
+
+        &.X {
+            background-image: linear-gradient(-225deg, #b9dab6 0%, #ffffff 29%, #8fcd3b 67%, #9bcbe4 100%);
+        }
+        &.O {
+            background-image: linear-gradient(-225deg, #58bed6 0%, #ffffff 29%, #58bed6 67%, #9bcbe4 100%);
         }
     }
 }
