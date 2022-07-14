@@ -6,7 +6,7 @@ const Winner = (props) => {
     <>
     <div className='board'>
       <h2 className={`winnerPlayer ${props.PlayerWins}`}>
-         Player {props.PlayerWins} is winner
+         {props.PlayerWins ? `Player ${props.PlayerWins} is winner` : "Khichdi" } 
       </h2>
       </div>
       <div className="party">

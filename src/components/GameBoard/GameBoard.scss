@@ -1,9 +1,7 @@
 .board {
     display: flex;
-    max-width: 500px;
     flex-wrap: wrap;
-    justify-content: center;
-    padding: 2%;
+    justify-content: center;;
     margin: 20px;
     width: 100%;
     position: relative;
@@ -25,7 +23,6 @@
     }
     & > div {
         width: calc(100% / 4);
-        height: 100px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -214,11 +211,27 @@
         }
     }
 }
+@media (min-width: 768px) {
+    .board {
+        padding: 2%;
+        max-width: 500px;
+
+        & > div {
+            height: 100px;
+        }
+    }
+}
 @media (max-width: 767px) {
     .board {
         max-width: 320px;
+        padding: 15% 3%;
+
         & > div {
-            height: 70px;
+            height: 85px;
+            width: 28%;
+        }
+        .BoardSpot > label {
+            font-size: 50px;
         }
     }
 }
