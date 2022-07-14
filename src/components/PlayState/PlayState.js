@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './PlayState.scss'
 
 const PlayState = () => {
   return (
-    <div>   
-        <Link to='/GameBoard'>Play</Link>
+    <div className='action-btn'>   
+        <Link to='/GameBoard' className='play-btn'>Play</Link>
     </div>
   )
 }

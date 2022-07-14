@@ -1,5 +1,5 @@
 import React from 'react'
-import './GameBoard.css';
+import './GameBoard.scss';
 
 const Squares = (props) => {
 
@@ -9,17 +9,18 @@ const Squares = (props) => {
   const personTwo = {
     playerTwo: 'O'
   }
-
+  
   const clickHandler = (e) => {
 
-    props.OnSaveValue(e.target.value, personTwo.playerTwo, personOne.playerOne);
+    props.OnSaveValue(e.target.value, personTwo.playerTwo, personOne.playerOne, e.target.id);
     e.target.setAttribute("disabled", "");
 
   }
 
   return (
     <div className='BoardSpot'>
-        <input type={'radio'} value={props.val} onClick={ clickHandler } />
+        <label htmlFor={props.SquarId} ></label>
+        <input type={'radio'} value={props.val} onClick={ clickHandler } id={props.SquarId} />
     </div>
   )
 }
