@@ -19,6 +19,36 @@ $duration: 1000;
     top: 0;
     left: 0;
 }
+.reset-game {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 5px;
+  font-weight: 600;
+  animation: text-animation 3s ease-in infinite;
+  background: rgb(2,114,168);
+  background-image: linear-gradient(
+    -225deg,
+    #b9dab6 0%,
+    #00d177 29%,
+    #00f7ff 67%,
+    #00aaff 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all .3s;
+  position: relative;
+  z-index: 10;
+  svg {
+    color: #00d177;
+    stroke-width: 3.5;
+  }
+}
 
 .party-popper {
   position: absolute;

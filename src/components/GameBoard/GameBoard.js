@@ -12,6 +12,7 @@ const GameBoard = () => {
     ["", "", ""],
     ["", "", ""]
   ];
+
   let playerTurn, turnFlag = false, turnCount = 0;
   const receivedValue = (receivedData, playerO, playerX, inputID) => {
 

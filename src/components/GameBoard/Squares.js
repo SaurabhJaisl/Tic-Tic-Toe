@@ -19,8 +19,8 @@ const Squares = (props) => {
 
   return (
     <div className='BoardSpot'>
-        <label htmlFor={props.SquarId} ></label>
-        <input type={'radio'} value={props.val} onClick={ clickHandler } id={props.SquarId} />
+      <label htmlFor={props.SquarId} ></label>
+      <input type={'radio'} value={props.val} onClick={ clickHandler } id={props.SquarId} />
     </div>
   )
 }
