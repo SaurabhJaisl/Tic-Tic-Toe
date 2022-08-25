@@ -16,7 +16,7 @@ const Winner = (props) => {
         <RefreshCw />
         Play Again
       </Link>
-      <div className="party">
+  {props.PlayerWins &&  <div className="party">
         <div className="party-popper" />
         <div className="party-popper" />
         <div className="party-popper" />
@@ -30,7 +30,7 @@ const Winner = (props) => {
         <div className="party-popper" />
         <div className="party-popper" />
         <div className="party-popper" />
-      </div>
+      </div>}
 
     </>
   )
